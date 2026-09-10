@@ -1,0 +1,660 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --primary: #ff8906;
+    --secondary: #e5306f;
+    --dark: #0e0d16;
+    --light: #767268;
+    --bg: #f7f8fd;
+    --white: #ffffff;
+    --max-w: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Ümumi */
+.btn {
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    font:
+        500 1rem "Montserrat",
+        sans-serif;
+    white-space: nowrap;
+    color: var(--white);
+    background: var(--primary);
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.btn:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    display: flex;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+ul {
+    list-style: none;
+}
+html,
+body {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Naviqasiya */
+nav {
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    z-index: 9;
+}
+.nav-top {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary);
+}
+.brand a {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.5rem;
+}
+.menu-btn {
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--primary);
+    transition: transform 0.5s;
+    z-index: -1;
+}
+.menu.open {
+    transform: translateY(100%);
+}
+.menu a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    white-space: nowrap;
+}
+.nav-cta {
+    display: none;
+}
+
+/* Container / Başlıqlar */
+.container {
+    max-width: var(--max-w);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--dark);
+    text-align: center;
+}
+.desc {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--light);
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+/* Hero */
+.hero {
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+}
+.hero-img img {
+    max-width: 550px;
+    margin-inline: auto;
+}
+.hero-text h1 {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--dark);
+    line-height: 4.75rem;
+    text-align: center;
+}
+.hero-text h1 span {
+    color: var(--secondary);
+}
+.hero-btns {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.hero-btns a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+.hero-btns a span {
+    margin-right: 0.5rem;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    border: 2px solid var(--dark);
+    border-radius: 100%;
+}
+
+/* Xidmətlər */
+.services {
+    background: var(--bg);
+}
+.services .title {
+    max-width: 750px;
+    margin-inline: auto;
+}
+.services-grid {
+    margin-block: 4rem;
+    display: grid;
+    gap: 1rem;
+}
+.service-card {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background: var(--white);
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+.service-card:hover {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+.service-card:nth-child(1):hover {
+    border-color: #00d5be;
+}
+.service-card:nth-child(2):hover {
+    border-color: #ff637e;
+}
+.service-card:nth-child(3):hover {
+    border-color: #c27aff;
+}
+.service-card:nth-child(4):hover {
+    border-color: #00bcff;
+}
+
+.service-card div {
+    margin-bottom: 1rem;
+    max-width: max-content;
+    padding: 5px 8px;
+    font-size: 1.75rem;
+    border-radius: 5px;
+}
+.service-card:nth-child(1) div {
+    color: #00d5be;
+    background: #f0fdfa;
+}
+.service-card:nth-child(2) div {
+    color: #ff637e;
+    background: #fff1f2;
+}
+.service-card:nth-child(3) div {
+    color: #c27aff;
+    background: #faf5ff;
+}
+.service-card:nth-child(4) div {
+    color: #00bcff;
+    background: #f0f9ff;
+}
+
+.service-card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+.service-card .desc {
+    text-align: left;
+}
+.services-cta {
+    display: flex;
+    justify-content: center;
+}
+
+/* Haqqımızda */
+.about {
+    display: grid;
+    gap: 2rem;
+}
+.about-img img {
+    max-width: 450px;
+    margin-inline: auto;
+}
+.about-text .title {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+.about-list {
+    display: grid;
+    gap: 2rem;
+}
+.about-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.about-list li span {
+    max-width: max-content;
+    padding: 5px 8px;
+    font-size: 1.75rem;
+    border-radius: 5px;
+}
+.about-list li:nth-child(1) span {
+    color: #00d5be;
+    background: #f0fdfa;
+}
+.about-list li:nth-child(2) span {
+    color: #ff637e;
+    background: #fff1f2;
+}
+.about-list li:nth-child(3) span {
+    color: #c27aff;
+    background: #faf5ff;
+}
+.about-list h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+.about-list .desc {
+    text-align: left;
+}
+
+/* Portfolio */
+.portfolio {
+    background: var(--bg);
+    overflow: hidden;
+}
+.portfolio-head {
+    margin-bottom: 4rem;
+    display: grid;
+    gap: 2rem;
+}
+.portfolio-img {
+    position: relative;
+    isolation: isolate;
+}
+.stats {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    transform: translateY(-50%);
+    padding-block: 1.5rem;
+    display: flex;
+    align-items: center;
+    background: var(--secondary);
+    border-radius: 0.25rem;
+    z-index: 1;
+}
+.stats div {
+    padding-inline: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.stats div:nth-child(1) {
+    border-right: 1px solid var(--bg);
+}
+.stats h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+}
+.stats p {
+    font-size: 0.9rem;
+    color: var(--bg);
+}
+.portfolio-img img {
+    border-radius: 0.5rem;
+}
+
+.portfolio-body {
+    display: grid;
+    gap: 2rem;
+}
+.portfolio-list {
+    display: grid;
+    gap: 2rem;
+}
+.portfolio-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.portfolio-list li span {
+    width: 5rem;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--secondary);
+    border-radius: 0.25rem;
+}
+.portfolio-list h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+.portfolio-list .desc {
+    text-align: left;
+}
+
+/* Müştəri rəyləri */
+.feedback {
+    padding-bottom: 3rem;
+}
+.swiper {
+    padding-block: 4rem 2rem;
+    width: 100%;
+}
+.swiper-slide {
+    min-width: 375px;
+}
+.fb-card {
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+.fb-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.fb-card .desc {
+    text-align: left;
+}
+.fb-meta {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.fb-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.fb-user img {
+    max-width: 50px;
+    border-radius: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.fb-user h4 {
+    margin-bottom: 0.25rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+.fb-user h5 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--light);
+}
+.fb-stars {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+.fb-stars span {
+    font-size: 1rem;
+    color: goldenrod;
+}
+
+/* Abunə */
+.sub-box {
+    padding: 5rem 1rem;
+    border-radius: 1rem;
+    background: var(--secondary);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.sub-box .title {
+    margin-bottom: 2rem;
+    max-width: 750px;
+    margin-inline: auto;
+    color: var(--white);
+}
+.sub-box form {
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border-radius: 0.5rem;
+}
+.sub-box input {
+    width: 100%;
+    padding-inline: 1rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+/* Footer */
+.footer-top {
+    display: grid;
+    gap: 4rem 2rem;
+}
+.f-brand {
+    margin-bottom: 2rem;
+}
+.f-brand a {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--dark);
+}
+.f-brand a span {
+    color: var(--secondary);
+}
+.f-col .desc {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+.f-col h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+.f-social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.f-social a {
+    padding: 4px 6px;
+    font-size: 1.125rem;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    border-radius: 100%;
+}
+.f-social a:hover {
+    color: var(--white);
+    background: var(--secondary);
+}
+.f-col h4 {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+.f-links {
+    display: grid;
+    gap: 1rem;
+}
+.f-links a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--light);
+}
+.f-links a:hover {
+    color: var(--secondary);
+}
+.f-links a span {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--secondary);
+}
+.f-bar {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--light);
+    text-align: center;
+}
+
+/* Responsive */
+@media (width > 540px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width > 768px) {
+    nav {
+        position: static;
+        padding: 1rem;
+        max-width: var(--max-w);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        border-bottom: 2px solid var(--bg);
+    }
+    .nav-top {
+        flex: 1;
+        padding: 0;
+        background: transparent;
+    }
+    .brand a {
+        color: var(--dark);
+    }
+    .brand a span {
+        color: var(--secondary);
+    }
+    .menu-btn {
+        display: none;
+    }
+    .menu {
+        position: static;
+        width: fit-content;
+        padding: 0;
+        flex-direction: row;
+        background: transparent;
+        transform: none !important;
+    }
+    .menu a {
+        color: var(--light);
+    }
+    .menu a:hover {
+        color: var(--primary);
+    }
+    .nav-cta {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hero {
+        padding-top: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 0;
+    }
+    .hero-img {
+        grid-area: 1/2/2/3;
+    }
+    .hero-text :is(h1, .desc) {
+        text-align: left;
+    }
+    .hero-btns {
+        justify-content: flex-start;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .about {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    .portfolio-head {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolio-head :is(.title, .desc) {
+        text-align: left;
+    }
+    .portfolio-body {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    .portfolio-img {
+        grid-area: 1/2/2/3;
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .f-col:nth-child(1) {
+        grid-column: 1/3;
+        max-width: 350px;
+    }
+}
+
+@media (width > 1024px) {
+    .services-grid {
+        gap: 1.5rem;
+    }
+    .fb-card {
+        padding: 2rem 1.5rem;
+    }
+}
